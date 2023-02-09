@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cSt-Dq-9eY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="wBA-Zv-6sl">
+            <objects>
+                <tableViewController id="cSt-Dq-9eY" customClass="TableViewController" customModule="___table_inside_cell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="52q-Te-Qca">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="115" id="PBj-Cr-m0f" customClass="TableViewCell" customModule="___table_inside_cell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PBj-Cr-m0f" id="FOc-yi-Whj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BSL-3y-7dt" customClass="mycollection" customModule="___table_inside_cell" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l5U-cv-UfG">
+                                                <size key="itemSize" width="100" height="97.5"/>
+                                                <size key="estimatedItemSize" width="100" height="100"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coll" id="6tM-Tw-Xab" customClass="CollectionViewCell" customModule="___table_inside_cell" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="9" width="100" height="97.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8cO-Tj-a8X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="97.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saturn" translatesAutoresizingMaskIntoConstraints="NO" id="rLR-gN-dQp">
+                                                                <rect key="frame" x="10" y="10" width="80" height="77.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="77.5" id="A4w-jK-IdP"/>
+                                                                    <constraint firstAttribute="width" constant="80" id="fZz-VY-H8q"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="rLR-gN-dQp" firstAttribute="top" secondItem="8cO-Tj-a8X" secondAttribute="top" constant="10" id="4bR-O6-cqC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="rLR-gN-dQp" secondAttribute="trailing" constant="10" id="67N-1x-0cT"/>
+                                                            <constraint firstAttribute="bottom" secondItem="rLR-gN-dQp" secondAttribute="bottom" constant="10" id="IWl-Y6-4kg"/>
+                                                            <constraint firstItem="rLR-gN-dQp" firstAttribute="leading" secondItem="8cO-Tj-a8X" secondAttribute="leading" constant="10" id="Wb3-wB-Quh"/>
+                                                        </constraints>
+                                                    </collectionViewCellContentView>
+                                                    <size key="customSize" width="100" height="97.5"/>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="rLR-gN-dQp" id="hiA-4d-2kH"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="BSL-3y-7dt" secondAttribute="trailing" id="5pJ-Rg-S51"/>
+                                        <constraint firstAttribute="bottom" secondItem="BSL-3y-7dt" secondAttribute="bottom" id="SUW-ac-xMf"/>
+                                        <constraint firstItem="BSL-3y-7dt" firstAttribute="top" secondItem="FOc-yi-Whj" secondAttribute="top" id="cCL-E5-mAi"/>
+                                        <constraint firstItem="BSL-3y-7dt" firstAttribute="leading" secondItem="FOc-yi-Whj" secondAttribute="leading" id="ghO-Eh-Vak"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cSt-Dq-9eY" id="2Z7-OW-0Z4"/>
+                            <outlet property="delegate" destination="cSt-Dq-9eY" id="SbL-gs-llp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZO-W8-kD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="-50.223214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="saturn" width="1000" height="750"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
